@@ -1,6 +1,6 @@
 # Feature Demo - GitHub Pages
 
-A beautiful, responsive GitHub Pages site for showcasing features with embedded YouTube videos, images, and detailed descriptions.
+A beautiful, responsive multi-page GitHub Pages site for showcasing features with embedded YouTube videos, images, and detailed descriptions. The site includes a home page with navigation to various feature subpages.
 
 ## 🚀 Quick Start
 
@@ -40,23 +40,47 @@ GitHub Pages may take a few minutes to deploy. You'll see a green checkmark when
 
 ## 📝 Customization
 
+### Site Structure
+
+The site consists of:
+- **Home Page** (`index.html`): Lists all available feature demos with navigation cards
+- **Feature Subpages**: Individual pages for each feature (e.g., `comfy-video-generation.html`)
+
+### Adding New Feature Pages
+
+1. Create a new HTML file (e.g., `my-feature.html`) based on `comfy-video-generation.html`
+2. Update the content, videos, and images for your feature
+3. Add a new feature card to `index.html` in the `.features-grid` section:
+   ```html
+   <a href="my-feature.html" class="feature-card">
+       <h3>My Feature</h3>
+       <p>Description of your feature...</p>
+       <div class="feature-tags">
+           <span class="tag">Tag 1</span>
+           <span class="tag">Tag 2</span>
+       </div>
+   </a>
+   ```
+
 ### Adding Your Videos
 
 1. Upload your videos to YouTube
 2. Get the video ID from the YouTube URL
-3. Replace the `src` attribute in the `<iframe>` tags in `index.html`
+3. Replace the `src` attribute in the `<iframe>` tags in the feature pages
    - Example: `https://www.youtube.com/embed/VIDEO_ID_HERE`
 
 ### Adding Your Images
 
-1. Create an `images/` folder in the repository
-2. Add your images (JPG, PNG, or WebP format)
-3. Update the `src` attributes in the image gallery section
-4. Update the captions with your descriptions
+1. Add your images to the `images/` folder (JPG, PNG, or WebP format)
+2. Update the `src` attributes in the image gallery sections of feature pages
+3. Update the captions with your descriptions
 
 ### Customizing Content
 
 - Edit `index.html` to change:
+  - Home page title and description
+  - Feature cards and navigation
+- Edit individual feature pages (e.g., `comfy-video-generation.html`) to change:
   - Feature titles and descriptions
   - Feature list items
   - Use cases
@@ -64,7 +88,7 @@ GitHub Pages may take a few minutes to deploy. You'll see a green checkmark when
 
 ### Styling
 
-All styles are embedded in the `<style>` tag in `index.html`. You can:
+All styles are embedded in the `<style>` tag in each HTML file. You can:
 - Change colors (currently using purple gradient)
 - Modify fonts
 - Adjust spacing and layout
@@ -74,17 +98,19 @@ All styles are embedded in the `<style>` tag in `index.html`. You can:
 
 ```
 feature-demo/
-├── index.html          # Main HTML file
-├── README.md           # This file
-├── .gitignore          # Git ignore file
-└── images/             # Place your images here
-    ├── example1.jpg
-    ├── example2.jpg
-    └── example3.jpg
+├── index.html                      # Home page with feature navigation
+├── comfy-video-generation.html     # Comfy Video Generation feature page
+├── README.md                        # This file
+├── .gitignore                       # Git ignore file
+└── images/                          # Place your images here
+    ├── comfy-example1.jpg
+    ├── comfy-example2.jpg
+    └── comfy-example3.jpg
 ```
 
 ## 🎨 Features
 
+- ✅ Multi-page structure with home page navigation
 - ✅ Fully responsive design (mobile-friendly)
 - ✅ Embedded YouTube video support
 - ✅ Image gallery with hover effects
@@ -92,6 +118,7 @@ feature-demo/
 - ✅ Easy to customize and extend
 - ✅ SEO-friendly structure
 - ✅ Fast loading times
+- ✅ Navigation between pages
 
 ## 📱 Mobile Support
 
