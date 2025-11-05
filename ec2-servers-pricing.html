@@ -204,43 +204,96 @@
             <section class="feature-section">
                 <h2>Overview</h2>
                 <p>
-                    This section provides information about the EC2 servers we are using, including 
-                    server configurations, pricing details, and cost optimization strategies. Content will 
-                    be added here.
+                    Our main application currently utilizes two dedicated EC2 instances to ensure robust performance 
+                    and scalability. These instances are configured to handle our production and testing environments, 
+                    respectively, providing the necessary computational resources for our application workloads.
                 </p>
             </section>
 
-            <!-- Feature Section 2 - Content will be added here -->
+            <!-- Feature Section 2 -->
             <section class="feature-section">
                 <h2>Server Configuration</h2>
                 <p>
-                    Details about server configurations will be added here.
+                    We are using two EC2 instances for our main application with the following configurations:
                 </p>
+                
+                <div style="display: grid; gap: 20px; margin: 30px 0;">
+                    <div style="background: #f8f9fa; border-left: 4px solid #2563eb; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <h3 style="color: #2563eb; margin-bottom: 10px;">Production Instance</h3>
+                        <p style="margin-bottom: 15px; color: #555;">
+                            <strong>Name:</strong> HeroE9-AppServerStackprod/Instance<br>
+                            <strong>Instance ID:</strong> i-0f4684e4efbc281a6<br>
+                            <strong>Instance Type:</strong> c5a.xlarge<br>
+                            <strong>State:</strong> <span style="color: #16a34a; font-weight: 600;">Running</span>
+                        </p>
+                        <p style="color: #666; font-size: 0.95em;">
+                            This instance is dedicated to our production environment, handling live application traffic 
+                            and critical operations. The c5a.xlarge instance type provides high-performance compute 
+                            optimized for CPU-intensive workloads.
+                        </p>
+                    </div>
+                    
+                    <div style="background: #f8f9fa; border-left: 4px solid #0891b2; padding: 20px; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                        <h3 style="color: #0891b2; margin-bottom: 10px;">Testing Instance</h3>
+                        <p style="margin-bottom: 15px; color: #555;">
+                            <strong>Name:</strong> HeroE9-AppServerStacktesting/Instance<br>
+                            <strong>Instance ID:</strong> i-0c5c15ea27b905c45<br>
+                            <strong>Instance Type:</strong> t3a.large<br>
+                            <strong>State:</strong> <span style="color: #16a34a; font-weight: 600;">Running</span>
+                        </p>
+                        <p style="color: #666; font-size: 0.95em;">
+                            Used for development, testing, and staging, this instance allows us to validate new features 
+                            and updates before deployment. The t3a.large instance type provides a balance of performance 
+                            and cost-effectiveness for non-production workloads.
+                        </p>
+                    </div>
+                </div>
             </section>
 
             <!-- Feature Section 3 - Pricing -->
             <section class="feature-section">
                 <h2>Pricing Information</h2>
                 <p>
-                    Pricing details will be displayed here.
+                    Current EC2 instance pricing based on AWS pricing (on-demand, US East region). 
+                    Actual costs may vary based on usage patterns, reserved instances, or other cost optimization strategies.
                 </p>
-                <!-- Pricing table placeholder - will be populated with actual data -->
                 <table class="pricing-table">
                     <thead>
                         <tr>
-                            <th>Server Type</th>
-                            <th>Specifications</th>
-                            <th>Monthly Cost</th>
+                            <th>Instance Name</th>
+                            <th>Instance Type & Specifications</th>
+                            <th>Estimated Monthly Cost*</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="3" style="text-align: center; padding: 20px; color: #666;">
-                                Pricing information will be added here
+                            <td><strong>Production</strong><br><span style="font-size: 0.85em; color: #666;">HeroE9-AppServerStackprod/Instance</span></td>
+                            <td>
+                                <strong>c5a.xlarge</strong><br>
+                                <span style="font-size: 0.9em; color: #666;">
+                                    4 vCPU, 8 GiB RAM<br>
+                                    Compute Optimized (AMD)
+                                </span>
                             </td>
+                            <td>$XXX.XX/month<br><span style="font-size: 0.85em; color: #666;">(Pricing details to be added)</span></td>
+                        </tr>
+                        <tr>
+                            <td><strong>Testing</strong><br><span style="font-size: 0.85em; color: #666;">HeroE9-AppServerStacktesting/Instance</span></td>
+                            <td>
+                                <strong>t3a.large</strong><br>
+                                <span style="font-size: 0.9em; color: #666;">
+                                    2 vCPU, 8 GiB RAM<br>
+                                    General Purpose (AMD), Burstable
+                                </span>
+                            </td>
+                            <td>$YY.YY/month<br><span style="font-size: 0.85em; color: #666;">(Pricing details to be added)</span></td>
                         </tr>
                     </tbody>
                 </table>
+                <p style="margin-top: 15px; color: #666; font-size: 0.9em; font-style: italic;">
+                    * Monthly costs are estimated based on 24/7 operation. Actual costs may vary based on actual usage, 
+                    reserved instances, savings plans, or other cost optimization measures.
+                </p>
             </section>
 
             <!-- Feature Section 4 -->
