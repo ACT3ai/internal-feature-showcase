@@ -173,6 +173,96 @@
             margin-right: 10px;
         }
 
+        .workflow-container {
+            position: relative;
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 30px 0;
+            overflow: hidden;
+        }
+
+        .workflow-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .workflow-header h3 {
+            color: #2563eb;
+            margin: 0;
+            font-size: 1.3em;
+        }
+
+        .workflow-controls {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+        }
+
+        .workflow-btn {
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9em;
+            transition: background 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .workflow-btn:hover {
+            background: #1d4ed8;
+        }
+
+        .workflow-btn.secondary {
+            background: #6b7280;
+        }
+
+        .workflow-btn.secondary:hover {
+            background: #4b5563;
+        }
+
+        .workflow-viewer {
+            position: relative;
+            width: 100%;
+            overflow: auto;
+            background: #1a1a1a;
+            border-radius: 8px;
+            cursor: grab;
+            max-height: 80vh;
+            border: 2px solid #e5e7eb;
+        }
+
+        .workflow-viewer:active {
+            cursor: grabbing;
+        }
+
+        .workflow-image {
+            display: block;
+            max-width: none;
+            user-select: none;
+            transform-origin: top left;
+            transition: transform 0.1s ease-out;
+        }
+
+        .zoom-info {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            z-index: 10;
+        }
+
         footer {
             text-align: center;
             padding: 40px 20px;
@@ -196,8 +286,117 @@
             .image-gallery {
                 grid-template-columns: 1fr;
             }
+
+            .workflow-viewer {
+                max-height: 60vh;
+            }
+
+            .workflow-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
         }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const workflowViewer = document.querySelector('.workflow-viewer');
+            const workflowImage = document.querySelector('.workflow-image');
+            const zoomInfo = document.querySelector('.zoom-info');
+            const zoomInBtn = document.getElementById('zoom-in');
+            const zoomOutBtn = document.getElementById('zoom-out');
+            const resetZoomBtn = document.getElementById('reset-zoom');
+            const downloadBtn = document.getElementById('download-workflow');
+
+            if (!workflowViewer || !workflowImage) return;
+
+            let scale = 1;
+            let panning = false;
+            let startX, startY, scrollLeft, scrollTop;
+
+            // Zoom functions
+            function updateZoom() {
+                workflowImage.style.transform = `scale(${scale})`;
+                if (zoomInfo) {
+                    zoomInfo.textContent = `${Math.round(scale * 100)}%`;
+                }
+            }
+
+            function zoomIn() {
+                scale = Math.min(scale + 0.25, 5);
+                updateZoom();
+            }
+
+            function zoomOut() {
+                scale = Math.max(scale - 0.25, 0.5);
+                updateZoom();
+            }
+
+            function resetZoom() {
+                scale = 1;
+                updateZoom();
+                workflowViewer.scrollLeft = 0;
+                workflowViewer.scrollTop = 0;
+            }
+
+            // Mouse wheel zoom
+            workflowViewer.addEventListener('wheel', function(e) {
+                e.preventDefault();
+                const delta = e.deltaY > 0 ? -0.1 : 0.1;
+                scale = Math.max(0.5, Math.min(5, scale + delta));
+                updateZoom();
+            }, { passive: false });
+
+            // Pan functionality
+            workflowViewer.addEventListener('mousedown', function(e) {
+                panning = true;
+                startX = e.pageX - workflowViewer.offsetLeft;
+                startY = e.pageY - workflowViewer.offsetTop;
+                scrollLeft = workflowViewer.scrollLeft;
+                scrollTop = workflowViewer.scrollTop;
+                workflowViewer.style.cursor = 'grabbing';
+            });
+
+            workflowViewer.addEventListener('mouseleave', function() {
+                panning = false;
+                workflowViewer.style.cursor = 'grab';
+            });
+
+            workflowViewer.addEventListener('mouseup', function() {
+                panning = false;
+                workflowViewer.style.cursor = 'grab';
+            });
+
+            workflowViewer.addEventListener('mousemove', function(e) {
+                if (!panning) return;
+                e.preventDefault();
+                const x = e.pageX - workflowViewer.offsetLeft;
+                const y = e.pageY - workflowViewer.offsetTop;
+                const walkX = (x - startX);
+                const walkY = (y - startY);
+                workflowViewer.scrollLeft = scrollLeft - walkX;
+                workflowViewer.scrollTop = scrollTop - walkY;
+            });
+
+            // Button events
+            if (zoomInBtn) zoomInBtn.addEventListener('click', zoomIn);
+            if (zoomOutBtn) zoomOutBtn.addEventListener('click', zoomOut);
+            if (resetZoomBtn) resetZoomBtn.addEventListener('click', resetZoom);
+
+            // Download functionality
+            if (downloadBtn) {
+                downloadBtn.addEventListener('click', function() {
+                    const img = workflowImage;
+                    const link = document.createElement('a');
+                    link.download = 'comfy-video-generation-workflow-v1.png';
+                    link.href = img.src;
+                    link.click();
+                });
+            }
+
+            // Initialize
+            updateZoom();
+        });
+    </script>
 </head>
 <body>
     <div class="container">
@@ -349,7 +548,42 @@
                 </ul>
             </section>
 
-            <!-- Feature Section 7 -->
+            <!-- Feature Section 7 - Workflow Graph -->
+            <section class="feature-section">
+                <h2>V1 Workflow Architecture</h2>
+                <p>
+                    The Comfy Video Generation V1 workflow is a sophisticated multi-stage pipeline that leverages 
+                    ComfyUI's node-based system. The workflow integrates multiple AI models, control mechanisms, and 
+                    processing stages to deliver high-quality video generation results.
+                </p>
+                <div class="workflow-container">
+                    <div class="workflow-header">
+                        <h3>ComfyUI Workflow Graph (V1)</h3>
+                        <div class="workflow-controls">
+                            <button class="workflow-btn secondary" id="zoom-out">Zoom Out (-)</button>
+                            <button class="workflow-btn secondary" id="reset-zoom">Reset</button>
+                            <button class="workflow-btn secondary" id="zoom-in">Zoom In (+)</button>
+                            <button class="workflow-btn" id="download-workflow">Download Image</button>
+                        </div>
+                    </div>
+                    <div class="workflow-viewer">
+                        <div class="zoom-info">100%</div>
+                        <img src="images/comfy-workflow-v1.png" alt="ComfyUI Video Generation Workflow V1" class="workflow-image" id="workflow-image" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div style="display: none; padding: 40px; text-align: center; color: #666;">
+                            <p><strong>Workflow Image Not Found</strong></p>
+                            <p>Please add the workflow graph image as <code>images/comfy-workflow-v1.png</code></p>
+                            <p style="font-size: 0.9em; margin-top: 10px;">The image should be a screenshot or export of the ComfyUI workflow graph.</p>
+                        </div>
+                    </div>
+                    <p style="margin-top: 15px; color: #666; font-size: 0.9em;">
+                        <strong>Instructions:</strong> Use mouse wheel to zoom in/out. Click and drag to pan around the workflow. 
+                        The workflow graph shows the complete node-based pipeline including model loading, ControlNet integration, 
+                        IPAdapter, video processing, and output generation stages.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Feature Section 8 -->
             <section class="feature-section">
                 <h2>Technical Details</h2>
                 <p>
