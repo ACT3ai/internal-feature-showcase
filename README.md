@@ -7,19 +7,19 @@ A comprehensive feature demonstration and showcase platform designed for CEO and
 ### 1. Create the GitHub Repository
 
 1. Go to [GitHub](https://github.com) and create a new repository
-2. Recommended name: `feature-showcase` (or any name you prefer)
+2. Recommended name: `internal-feature-showcase` (or any name you prefer)
 3. Make sure it's set to **Public** (for GitHub Pages)
 4. **Do NOT** initialize with README, .gitignore, or license (we already have these)
 
 ### 2. Push to GitHub
 
 ```bash
-cd feature-showcase
+cd internal-feature-showcase
 git init
 git add .
 git commit -m "Initial commit: GitHub Pages demo site"
 git branch -M main
-git remote add origin https://github.com/YOUR_USERNAME/feature-showcase.git
+git remote add origin https://github.com/YOUR_USERNAME/internal-feature-showcase.git
 git push -u origin main
 ```
 
@@ -34,7 +34,7 @@ Replace `YOUR_USERNAME` with your GitHub username.
    - Branch: `main`
    - Folder: `/ (root)`
 5. Click **Save**
-6. Your site will be available at: `https://YOUR_USERNAME.github.io/feature-showcase/` (or your repo name)
+6. Your site will be available at: `https://YOUR_USERNAME.github.io/internal-feature-showcase/` (or your repo name)
 
 ## 🎯 Purpose
 
@@ -112,7 +112,7 @@ All styles are embedded in the `<style>` tag in each HTML file. You can:
 ## 📁 Project Structure
 
 ```
-feature-showcase/
+internal-feature-showcase/
 ├── index.html                      # Home page with feature navigation
 ├── comfy-video-generation.html     # Comfy Video Generation feature page
 ├── README.md                        # This file
