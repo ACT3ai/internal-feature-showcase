@@ -71,66 +71,65 @@
             line-height: 1.8;
         }
 
-        .features-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
+        .features-list {
+            list-style: none;
             margin-top: 40px;
+            padding: 0;
         }
 
-        .feature-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 15px;
-            padding: 30px;
+        .feature-item {
+            background: white;
+            border-left: 4px solid #2563eb;
+            border-radius: 8px;
+            padding: 25px 30px;
+            margin-bottom: 15px;
             transition: all 0.3s ease;
-            border: 2px solid transparent;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
             text-decoration: none;
             color: inherit;
             display: block;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
-        .feature-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
-            border-color: #2563eb;
+        .feature-item:hover {
+            border-left-width: 6px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+            transform: translateX(5px);
         }
 
-        .feature-card h3 {
-            color: #2563eb;
-            font-size: 1.8em;
-            margin-bottom: 15px;
+        .feature-item-header {
             display: flex;
-            align-items: center;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin-bottom: 10px;
         }
 
-        .feature-card h3::before {
-            content: "▶";
-            margin-right: 10px;
-            font-size: 0.8em;
-            opacity: 0.7;
+        .feature-item h3 {
+            color: #2563eb;
+            font-size: 1.5em;
+            margin: 0;
+            font-weight: 600;
         }
 
-        .feature-card p {
-            color: #555;
-            font-size: 1.1em;
+        .feature-item p {
+            color: #666;
+            font-size: 1em;
             line-height: 1.6;
-            margin-bottom: 15px;
+            margin: 0;
         }
 
-        .feature-card .feature-tags {
+        .feature-item .feature-tags {
             display: flex;
             flex-wrap: wrap;
             gap: 8px;
-            margin-top: 15px;
+            margin-top: 12px;
         }
 
         .tag {
-            background: #2563eb;
-            color: white;
-            padding: 5px 12px;
-            border-radius: 20px;
-            font-size: 0.85em;
+            background: #e0f2fe;
+            color: #2563eb;
+            padding: 4px 10px;
+            border-radius: 12px;
+            font-size: 0.8em;
             font-weight: 500;
         }
 
@@ -150,9 +149,12 @@
                 padding: 30px 20px;
             }
 
-            .features-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
+            .feature-item {
+                padding: 20px;
+            }
+            
+            .feature-item-header {
+                flex-direction: column;
             }
 
             .intro h2 {
@@ -180,41 +182,25 @@
                 </p>
             </div>
 
-            <div class="features-grid">
-                <a href="comfy-video-generation.html" class="feature-card">
-                    <h3>Comfy Video Generation</h3>
-                    <p>
-                        Advanced video-to-video generation powered by ComfyUI. Transform existing videos 
-                        with AI-powered generation, style transfer, and inpainting capabilities.
-                    </p>
-                    <div class="feature-tags">
-                        <span class="tag">Video AI</span>
-                        <span class="tag">ComfyUI</span>
-                        <span class="tag">Generation</span>
-                    </div>
-                </a>
-
-                <!-- Placeholder for future features -->
-                <div class="feature-card" style="opacity: 0.6; cursor: default;">
-                    <h3>Coming Soon</h3>
-                    <p>
-                        More exciting features will be added here. Stay tuned for updates!
-                    </p>
-                    <div class="feature-tags">
-                        <span class="tag">Coming Soon</span>
-                    </div>
-                </div>
-
-                <div class="feature-card" style="opacity: 0.6; cursor: default;">
-                    <h3>Coming Soon</h3>
-                    <p>
-                        More exciting features will be added here. Stay tuned for updates!
-                    </p>
-                    <div class="feature-tags">
-                        <span class="tag">Coming Soon</span>
-                    </div>
-                </div>
-            </div>
+            <ul class="features-list">
+                <li>
+                    <a href="comfy-video-generation.html" class="feature-item">
+                        <div class="feature-item-header">
+                            <h3>Comfy Video Generation</h3>
+                        </div>
+                        <p>
+                            Advanced video-to-video generation powered by ComfyUI. Transform existing videos 
+                            with AI-powered generation, style transfer, and inpainting capabilities.
+                        </p>
+                        <div class="feature-tags">
+                            <span class="tag">Video AI</span>
+                            <span class="tag">ComfyUI</span>
+                            <span class="tag">Generation</span>
+                        </div>
+                    </a>
+                </li>
+                <!-- Add more features here as they become available -->
+            </ul>
         </div>
     </div>
 
