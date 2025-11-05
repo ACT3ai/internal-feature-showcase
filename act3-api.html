@@ -6,6 +6,18 @@
     <meta name="description" content="ACT3 API - Feature demonstration and API showcase">
     <title>ACT3 API - Feature Showcase</title>
     <style>
+        :root {
+            --ifm-color-primary: #25c2a0;
+            --ifm-color-primary-dark: #21af90;
+            --ifm-font-family-base: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, sans-serif;
+            --ifm-font-size-base: 16px;
+            --ifm-line-height-base: 1.7;
+            --ifm-color-content: #1c1e21;
+            --ifm-color-content-secondary: #606770;
+            --ifm-background-color: #ffffff;
+            --ifm-background-surface-color: #f8f9fa;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -13,69 +25,78 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+            font-family: var(--ifm-font-family-base);
+            font-size: var(--ifm-font-size-base);
+            line-height: var(--ifm-line-height-base);
+            color: var(--ifm-color-content);
+            background: var(--ifm-background-color);
             min-height: 100vh;
         }
 
-        .container {
+        .navbar {
+            background: var(--ifm-background-color);
+            border-bottom: 1px solid #e5e7eb;
+            padding: 0.75rem 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        .navbar-container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .nav-bar {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            padding: 15px 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
-
-        .nav-bar a {
-            color: white;
+        .navbar-brand {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--ifm-color-primary);
             text-decoration: none;
-            font-size: 1.1em;
-            transition: opacity 0.3s ease;
         }
 
-        .nav-bar a:hover {
-            opacity: 0.8;
+        .navbar-link {
+            color: var(--ifm-color-content-secondary);
+            text-decoration: none;
+            font-size: 0.9375rem;
+            transition: color 0.2s;
         }
 
-        .nav-bar a::before {
-            content: "← ";
+        .navbar-link:hover {
+            color: var(--ifm-color-primary);
         }
 
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            color: white;
+        .main-wrapper {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1rem;
         }
 
-        header h1 {
-            font-size: 3em;
-            margin-bottom: 10px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        .page-header {
+            margin-bottom: 3rem;
         }
 
-        header p {
-            font-size: 1.2em;
-            opacity: 0.9;
+        .page-header h1 {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--ifm-color-content);
+        }
+
+        .page-header p {
+            font-size: 1.25rem;
+            color: var(--ifm-color-content-secondary);
         }
 
         .content {
-            background: white;
-            border-radius: 20px;
-            padding: 40px;
-            margin: 20px 0;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            background: var(--ifm-background-color);
         }
 
         .feature-section {
-            margin-bottom: 60px;
+            margin-bottom: 3rem;
         }
 
         .feature-section:last-child {
@@ -83,29 +104,24 @@
         }
 
         .feature-section h2 {
-            color: #2563eb;
-            font-size: 2em;
-            margin-bottom: 20px;
-            padding-bottom: 10px;
-            border-bottom: 3px solid #2563eb;
-        }
-
-        .feature-section p {
-            font-size: 1.1em;
-            margin-bottom: 30px;
-            color: #555;
-            line-height: 1.8;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e5e7eb;
+            color: var(--ifm-color-content);
         }
 
         .video-container {
             position: relative;
-            padding-bottom: 56.25%; /* 16:9 aspect ratio */
+            padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
             max-width: 100%;
-            margin: 30px 0;
-            border-radius: 10px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            margin: 1.5rem 0;
+            border-radius: 8px;
+            border: 1px solid #e5e7eb;
+            overflow: hidden;
         }
 
         .video-container iframe {
@@ -115,46 +131,66 @@
             width: 100%;
             height: 100%;
             border: none;
-            border-radius: 10px;
         }
 
-        footer {
+        .demo-attribution {
             text-align: center;
-            padding: 40px 20px;
-            color: white;
-            opacity: 0.8;
+            color: var(--ifm-color-content-secondary);
+            font-size: 0.9375rem;
+            margin-top: 1rem;
+        }
+
+        .demo-attribution p {
+            margin: 0.25rem 0;
+        }
+
+        .footer {
+            background: var(--ifm-background-surface-color);
+            border-top: 1px solid #e5e7eb;
+            padding: 2rem 1rem;
+            text-align: center;
+            color: var(--ifm-color-content-secondary);
+            margin-top: 4rem;
+        }
+
+        .footer a {
+            color: var(--ifm-color-primary);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
         }
 
         @media (max-width: 768px) {
-            header h1 {
-                font-size: 2em;
+            .page-header h1 {
+                font-size: 2rem;
             }
 
-            .content {
-                padding: 20px;
+            .main-wrapper {
+                padding: 2rem 1rem;
             }
 
             .feature-section h2 {
-                font-size: 1.5em;
+                font-size: 1.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="nav-bar">
-            <a href="index.html">Back to Home</a>
-        </nav>
-    </div>
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-brand">Feature Showcase</a>
+            <a href="index.html" class="navbar-link">← Back to Home</a>
+        </div>
+    </nav>
 
-    <header>
-        <div class="container">
+    <main class="main-wrapper">
+        <div class="page-header">
             <h1>ACT3 API</h1>
             <p>API demonstration and showcase</p>
         </div>
-    </header>
 
-    <div class="container">
         <div class="content">
             <!-- Demo Video -->
             <section class="feature-section">
@@ -167,20 +203,17 @@
                         allowfullscreen>
                     </iframe>
                 </div>
-                <div style="text-align: center; color: #666; font-size: 0.95em; margin-top: 15px;">
+                <div class="demo-attribution">
                     <p><strong>Demo created by:</strong> Nabin Kawan</p>
                     <p><strong>Demo created at:</strong> November 5, 2025</p>
                 </div>
             </section>
         </div>
-    </div>
+    </main>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Feature Showcase. All rights reserved.</p>
-            <p><a href="index.html" style="color: white; text-decoration: underline;">Back to Feature Showcase</a></p>
-        </div>
+    <footer class="footer">
+        <p>&copy; 2024 Feature Showcase. All rights reserved.</p>
+        <p><a href="index.html">Back to Feature Showcase</a></p>
     </footer>
 </body>
 </html>
-
