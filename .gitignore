@@ -27,3 +27,8 @@ npm-debug.log*
 # images/*.jpg
 # images/*.png
 # images/*.gif
+
+# Docusaurus build output
+/build
+/.docusaurus
+/.cache-loader
