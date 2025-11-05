@@ -181,6 +181,25 @@
             border-left: 4px solid #2563eb;
         }
 
+        .workflow-container.active {
+            background: linear-gradient(135deg, #eff6ff 0%, #f0f9ff 100%);
+            border-left: 4px solid #0891b2;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.15);
+        }
+
+        .workflow-badge {
+            display: inline-block;
+            background: #0891b2;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 12px;
+            font-size: 0.75em;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-left: 10px;
+        }
+
         .workflow-download {
             display: inline-flex;
             align-items: center;
@@ -198,6 +217,14 @@
 
         .workflow-download:hover {
             background: #1d4ed8;
+        }
+
+        .workflow-download.active {
+            background: #0891b2;
+        }
+
+        .workflow-download.active:hover {
+            background: #0e7490;
         }
 
         .workflow-download::before {
@@ -265,30 +292,30 @@
                 </div>
             </section>
 
-            <!-- Workflow Graph Download -->
+            <!-- V2 Workflow Graph Download (Active/New) -->
+            <section class="feature-section">
+                <h2>V2 Workflow Architecture <span class="workflow-badge">Active</span></h2>
+                <div class="workflow-container active">
+                    <p>
+                        <strong>Workflow Graph (Version 2)</strong><br>
+                        Download the complete ComfyUI workflow graph for the enhanced V2 architecture with improved video-to-video processing, ControlNet integration, and multi-stage sampling. This is the current active workflow.
+                    </p>
+                    <a href="images/comfy-workflow-v2.png" download="comfy-video-generation-workflow-v2.png" class="workflow-download active">
+                        Download Workflow Graph (V2)
+                    </a>
+                </div>
+            </section>
+
+            <!-- Workflow Graph Download (Legacy) -->
             <section class="feature-section">
                 <h2>V1 Workflow Architecture</h2>
                 <div class="workflow-container">
                     <p>
                         <strong>Workflow Graph (Version 1)</strong><br>
-                        Download the complete ComfyUI workflow graph to view the detailed node-based architecture.
+                        Download the complete ComfyUI workflow graph to view the detailed node-based architecture. This is the legacy workflow version.
                     </p>
                     <a href="images/comfy-workflow-v1.png" download="comfy-video-generation-workflow-v1.png" class="workflow-download">
                         Download Workflow Graph (V1)
-                    </a>
-                </div>
-            </section>
-
-            <!-- V2 Workflow Graph Download -->
-            <section class="feature-section">
-                <h2>V2 Workflow Architecture</h2>
-                <div class="workflow-container">
-                    <p>
-                        <strong>Workflow Graph (Version 2)</strong><br>
-                        Download the complete ComfyUI workflow graph for the enhanced V2 architecture with improved video-to-video processing, ControlNet integration, and multi-stage sampling.
-                    </p>
-                    <a href="images/comfy-workflow-v2.png" download="comfy-video-generation-workflow-v2.png" class="workflow-download">
-                        Download Workflow Graph (V2)
                     </a>
                 </div>
             </section>
