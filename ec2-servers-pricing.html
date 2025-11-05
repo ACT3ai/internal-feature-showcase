@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EC2 Servers & Pricing - Infrastructure costs and server configuration">
+    <title>EC2 Servers & Pricing - Feature Showcase</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #2563eb 0%, #0891b2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .nav-bar {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 15px 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .nav-bar a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: opacity 0.3s ease;
+        }
+
+        .nav-bar a:hover {
+            opacity: 0.8;
+        }
+
+        .nav-bar a::before {
+            content: "← ";
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            color: white;
+        }
+
+        header h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        header p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin: 20px 0;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+        }
+
+        .feature-section {
+            margin-bottom: 60px;
+        }
+
+        .feature-section:last-child {
+            margin-bottom: 0;
+        }
+
+        .feature-section h2 {
+            color: #2563eb;
+            font-size: 2em;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 3px solid #2563eb;
+        }
+
+        .feature-section p {
+            font-size: 1.1em;
+            margin-bottom: 30px;
+            color: #555;
+            line-height: 1.8;
+        }
+
+        .features-list {
+            list-style: none;
+            margin: 20px 0;
+        }
+
+        .features-list li {
+            padding: 15px;
+            margin: 10px 0;
+            background: #f8f9fa;
+            border-left: 4px solid #2563eb;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .features-list li:hover {
+            background: #e9ecef;
+        }
+
+        .features-list li::before {
+            content: "✓ ";
+            color: #2563eb;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+
+        .pricing-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 30px 0;
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+
+        .pricing-table th {
+            background: #2563eb;
+            color: white;
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .pricing-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .pricing-table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .pricing-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            color: white;
+            opacity: 0.8;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2em;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .feature-section h2 {
+                font-size: 1.5em;
+            }
+
+            .pricing-table {
+                font-size: 0.9em;
+            }
+
+            .pricing-table th,
+            .pricing-table td {
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <nav class="nav-bar">
+            <a href="index.html">Back to Home</a>
+        </nav>
+    </div>
+
+    <header>
+        <div class="container">
+            <h1>EC2 Servers & Pricing</h1>
+            <p>Infrastructure costs and server configuration overview</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content">
+            <!-- Feature Section 1 -->
+            <section class="feature-section">
+                <h2>Overview</h2>
+                <p>
+                    This section provides information about the EC2 servers we are using, including 
+                    server configurations, pricing details, and cost optimization strategies. Content will 
+                    be added here.
+                </p>
+            </section>
+
+            <!-- Feature Section 2 - Content will be added here -->
+            <section class="feature-section">
+                <h2>Server Configuration</h2>
+                <p>
+                    Details about server configurations will be added here.
+                </p>
+            </section>
+
+            <!-- Feature Section 3 - Pricing -->
+            <section class="feature-section">
+                <h2>Pricing Information</h2>
+                <p>
+                    Pricing details will be displayed here.
+                </p>
+                <!-- Pricing table placeholder - will be populated with actual data -->
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Server Type</th>
+                            <th>Specifications</th>
+                            <th>Monthly Cost</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="3" style="text-align: center; padding: 20px; color: #666;">
+                                Pricing information will be added here
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+
+            <!-- Feature Section 4 -->
+            <section class="feature-section">
+                <h2>Cost Optimization</h2>
+                <p>
+                    Information about cost optimization strategies will be added here.
+                </p>
+                <ul class="features-list">
+                    <li>Cost optimization details to be added</li>
+                </ul>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Feature Showcase. All rights reserved.</p>
+            <p><a href="index.html" style="color: white; text-decoration: underline;">Back to Feature Showcase</a></p>
+        </div>
+    </footer>
+</body>
+</html>
+
