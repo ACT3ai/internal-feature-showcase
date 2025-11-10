@@ -28,7 +28,19 @@ npm-debug.log*
 # images/*.png
 # images/*.gif
 
+# Dependencies
+/node_modules
+
 # Docusaurus build output
 /build
 /.docusaurus
 /.cache-loader
+
+# Misc
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+yarn-debug.log*
+yarn-error.log*
