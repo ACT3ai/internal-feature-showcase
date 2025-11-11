@@ -60,6 +60,20 @@ Advanced video generation capabilities powered by ComfyUI.
   <p><strong>Quality:</strong> High</p>
 </div>
 
+### Title: Ext. Meet Janet #4 — Apartment Roof Top (Non mocap text 2 video)
+
+**Generative Rendering:** [View Shot](https://act3ai.com/aistoryboard/projects/6f982637-0789-4736-b467-68faecd959a1/episode/4e92110c-a1ff-4322-baf9-adbf9adda6ea/scenes/12350c71-9db8-41b0-b377-e6b12a400cd2/shots/10600501-eb29-45b2-83b0-f7e983bcb4ad/details/shot-editor/v2/?debuggerMode=true)
+
+<video width="100%" controls>
+  <source src="https://dgqhpf9fbvypk.cloudfront.net/production/4daaf112-773e-44af-b2d6-bb4096e6f119/6f982637-0789-4736-b467-68faecd959a1/storyboard-shots/10600501-eb29-45b2-83b0-f7e983bcb4ad/COMFY_VIDEO_FINAL/wan2_1_fun_control_realistic_flux/finalVideo_2025-11-10_20-55-28_241874.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
+<div style={{textAlign: 'center', color: '#606770', fontSize: '0.9375rem', marginTop: '1rem'}}>
+  <p><strong>Created At:</strong> 11/10/2025</p>
+  <p><strong>Quality:</strong> Draft</p>
+</div>
+
 ## V2 Workflow Architecture <span className="badge badge--primary">Active</span>
 
 Workflow Graph (Version 2)
