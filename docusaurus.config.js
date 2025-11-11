@@ -54,6 +54,9 @@ const config = {
     ({
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
+      colorMode: {
+        respectPrefersColorScheme: true,
+      },
       navbar: {
         title: 'Feature Showcase',
         logo: {
@@ -63,8 +66,8 @@ const config = {
         items: [],
       },
       footer: {
-        style: 'light',
-        copyright: `Copyright © ${new Date().getFullYear()} Feature Showcase. All rights reserved.`,
+        style: 'dark',
+        copyright: `Copyright © ${new Date().getFullYear()} ACT 3 AI, Inc. All rights reserved.`,
       },
       prism: {
         theme: themes.github,

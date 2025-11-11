@@ -1,7 +1,7 @@
 # Investigation Topics
 
 ## Overview
-This document provides a comprehensive list of all 128 topics related to the Charlie Kirk assassination investigation.
+This document provides a comprehensive list of investigation topics.
 
 ## Topic Categories
 
@@ -20,8 +20,6 @@ This document provides a comprehensive list of all 128 topics related to the Cha
 - Forensic analysis
 
 ### Key Individuals
-- Tyler Robinson
-- Charlie Kirk
 - Witnesses
 - Suspects
 - Government officials

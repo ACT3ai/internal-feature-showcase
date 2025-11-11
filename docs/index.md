@@ -1,14 +1,11 @@
-# Charlie Kirk Investigation
+# Feature Showcase
 
-Welcome to the Charlie Kirk assassination investigation documentation.
+Welcome to the Feature Showcase documentation.
 
-## Main Document
-[Read the full investigation document](charlie-kirk.md)
+This showcase provides a comprehensive overview of our feature development progress. Each feature includes demonstration videos, visual examples, detailed explanations, and use cases to help understand capabilities, progress, and potential impact.
 
-## Topics
-- [Topics Overview](/Topics) - Comprehensive list of investigation topics
-- [Topic Analyses](/Topic-Analyses) - Detailed analysis files
-- [Topics3 Directory](Topics3/overview) - Additional topic categories
+## Features
 
----
-*This site was last updated: $(date)*
+- [Comfy Video Generation](./comfy-video-generation)
+- [EC2 Servers & Pricing](./ec2-servers-pricing)
+- [ACT3 API](./act3-api)
