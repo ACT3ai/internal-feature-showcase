@@ -137,6 +137,16 @@ All demos on this page are generated using the **Wan2.2 VACE Fun model** in Comf
   <p><strong>Quality:</strong> Draft</p>
 </div>
 
+## Split Jump
+**Generative Rendering:** [View Shot](https://act3ai.com/aistoryboard/projects/d052de43-90e8-4865-b178-316823fe7fee/episode/54ec6a41-9ea5-4a93-a5cf-5f2b15d66e9e/scenes/b09cad19-27aa-4b58-9983-5689716e1939/shots/d8f57e17-6d0b-4de6-8817-38d8293ad31c/details/shot-editor/v2/?debuggerMode=true)
+
+**Output Video:**
+
+<video width="100%" controls>
+  <source src="https://dgqhpf9fbvypk.cloudfront.net/production/4daaf112-773e-44af-b2d6-bb4096e6f119/d052de43-90e8-4865-b178-316823fe7fee/storyboard-shots/d8f57e17-6d0b-4de6-8817-38d8293ad31c/COMFY_VIDEO_FINAL/wan2_1_fun_control_realistic_flux/finalVideo_2025-11-12_01-34-32_771518.mp4" type="video/mp4" />
+  Your browser does not support the video tag.
+</video>
+
 ## Title: Fighting stance
 
 **Generative Rendering:** [View Shot](https://act3ai.com/aistoryboard/projects/b40b3493-9482-40b1-8247-fdfb1fb3ba03/episode/9348f593-7f29-45ec-92c7-33036a671c15/scenes/3a69221c-4252-495f-bb28-cf78a04f62ab/shots/558604cd-e621-425b-9530-26eb50d7078b/details/shot-editor/v2/?debuggerMode=true)
