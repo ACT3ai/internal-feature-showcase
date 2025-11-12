@@ -20,7 +20,26 @@ const sidebars = {
       type: 'category',
       label: 'Features',
       items: [
-        'comfy-video-generation',
+        {
+          type: 'category',
+          label: 'Comfy Video Generation',
+          link: {
+            type: 'doc',
+            id: 'comfy-video-generation/index',
+          },
+          items: [
+            {
+              type: 'doc',
+              id: 'comfy-video-generation/november-12-2025',
+              label: 'November 12, 2025',
+            },
+            {
+              type: 'doc',
+              id: 'comfy-video-generation/november-10-2025',
+              label: 'November 10, 2025',
+            },
+          ],
+        },
         'ec2-servers-pricing',
         'act3-api',
       ],
