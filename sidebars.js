@@ -30,6 +30,11 @@ const sidebars = {
           items: [
             {
               type: 'doc',
+              id: 'comfy-video-generation/november-17-2025',
+              label: 'November 17, 2025',
+            },
+            {
+              type: 'doc',
               id: 'comfy-video-generation/november-14-2025',
               label: 'November 14, 2025',
             },
