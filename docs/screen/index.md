@@ -43,7 +43,7 @@ Browse Screen demos organized by creation date:
 
 ## Detailed Documentation
 
-- [Screen Replacement System Overview](README)
+- [Screen Replacement System Overview](./README.md)
 - [Complete Instructions Guide](INSTRUCTIONS)
 - [Training Guide](README_TRAINING)
 - [YOLO Dataset Details](YOLO_DATASET_DETAILS)
