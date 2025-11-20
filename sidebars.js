@@ -50,6 +50,52 @@ const sidebars = {
             },
           ],
         },
+        {
+          type: 'category',
+          label: 'Screen',
+          link: {
+            type: 'doc',
+            id: 'screen/index',
+          },
+          items: [
+            {
+              type: 'category',
+              label: 'Documentation',
+              items: [
+                {
+                  type: 'doc',
+                  id: 'screen/README',
+                  label: 'Overview',
+                },
+                {
+                  type: 'doc',
+                  id: 'screen/INSTRUCTIONS',
+                  label: 'Instructions',
+                },
+                {
+                  type: 'doc',
+                  id: 'screen/README_TRAINING',
+                  label: 'Training Guide',
+                },
+                {
+                  type: 'doc',
+                  id: 'screen/YOLO_DATASET_DETAILS',
+                  label: 'YOLO Dataset Details',
+                },
+                {
+                  type: 'doc',
+                  id: 'screen/HOW_CUSTOM_MODEL_HELPS',
+                  label: 'How Custom Model Helps',
+                },
+                {
+                  type: 'doc',
+                  id: 'screen/november-20-2025',
+                  label: 'November 20, 2025',
+                },
+              ],
+            },
+          ],
+        },
         'ec2-servers-pricing',
         'act3-api',
       ],
