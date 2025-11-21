@@ -1,6 +1,6 @@
-
-id: november-20-2025
+---
 title: Screen Feature - November 20, 2025
+---
 
 # Screen Feature – November 20, 2025
 

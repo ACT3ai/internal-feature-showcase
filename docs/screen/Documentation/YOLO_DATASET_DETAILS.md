@@ -1,5 +1,4 @@
 ---
-id: YOLO_DATASET_DETAILS
 title: YOLO Dataset Details
 ---
 

@@ -64,32 +64,43 @@ const sidebars = {
               items: [
                 {
                   type: 'doc',
-                  id: 'screen/README',
+                  id: 'screen/Documentation/README',
                   label: 'Overview',
                 },
                 {
                   type: 'doc',
-                  id: 'screen/INSTRUCTIONS',
+                  id: 'screen/Documentation/INSTRUCTIONS',
                   label: 'Instructions',
                 },
                 {
                   type: 'doc',
-                  id: 'screen/README_TRAINING',
+                  id: 'screen/Documentation/README_TRAINING',
                   label: 'Training Guide',
                 },
                 {
                   type: 'doc',
-                  id: 'screen/YOLO_DATASET_DETAILS',
+                  id: 'screen/Documentation/YOLO_DATASET_DETAILS',
                   label: 'YOLO Dataset Details',
                 },
                 {
                   type: 'doc',
-                  id: 'screen/HOW_CUSTOM_MODEL_HELPS',
+                  id: 'screen/Documentation/HOW_CUSTOM_MODEL_HELPS',
                   label: 'How Custom Model Helps',
+                },
+              ],
+            },
+            {
+              type: 'category',
+              label: 'Daily Updates',
+              items: [
+                {
+                  type: 'doc',
+                  id: 'screen/Daily_Update/nov_21_2025/SCREEN_REPLACEMENT_GENERATION_FLOW',
+                  label: 'November 21, 2025',
                 },
                 {
                   type: 'doc',
-                  id: 'screen/november-20-2025',
+                  id: 'screen/Daily_Update/nov_20_2025/november-20-2025',
                   label: 'November 20, 2025',
                 },
               ],

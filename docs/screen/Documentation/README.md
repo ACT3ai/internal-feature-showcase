@@ -1,5 +1,4 @@
 ---
-id: README
 title: Screen Replacement System Overview
 ---
 
@@ -136,7 +135,6 @@ When using `detection_method="both"`, two output files are generated:
 
 ## Documentation
 
-- **[Technical Documentation](TECHNICAL_DOCUMENTATION.md)** - Complete technical details
 - **[Training Guide](README_TRAINING.md)** - Custom model training
 - **[Instructions](INSTRUCTIONS.md)** - End-to-end workflows (including Blender planar-tracking approaches)
 

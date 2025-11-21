@@ -28,7 +28,7 @@ The system utilizes a combination of computer vision techniques and machine lear
 *   **Custom Model Training:**
     *   We train custom YOLO models on specific datasets (e.g., our template data) to specialize in detecting screens of particular devices or in unique environments.
     *   This "domain adaptation" allows the system to handle edge cases like reflections, odd angles, or partial occlusions where generic models might fail.
-    *   [Read more about how custom models help](HOW_CUSTOM_MODEL_HELPS).
+    *   [Read more about how custom models help](Documentation/HOW_CUSTOM_MODEL_HELPS).
 
 *   **Blender Integration:**
     *   For the highest quality compositing, tracking data (from OpenCV or YOLO) can be exported to Blender.
@@ -39,12 +39,12 @@ The system utilizes a combination of computer vision techniques and machine lear
 
 Browse Screen demos organized by creation date:
 
-- [November 20, 2025](november-20-2025) - Initial Screen feature walkthrough
+- [November 20, 2025](Daily_Update/nov_20_2025/november-20-2025) - Initial Screen feature walkthrough
 
 ## Detailed Documentation
 
-- [Screen Replacement System Overview](./README.md)
-- [Complete Instructions Guide](INSTRUCTIONS)
-- [Training Guide](README_TRAINING)
-- [YOLO Dataset Details](YOLO_DATASET_DETAILS)
-- [How Custom Trained Model Improves Screen Detection](HOW_CUSTOM_MODEL_HELPS)
+- [Screen Replacement System Overview](Documentation/README.md)
+- [Complete Instructions Guide](Documentation/INSTRUCTIONS)
+- [Training Guide](Documentation/README_TRAINING)
+- [YOLO Dataset Details](Documentation/YOLO_DATASET_DETAILS)
+- [How Custom Trained Model Improves Screen Detection](Documentation/HOW_CUSTOM_MODEL_HELPS)
