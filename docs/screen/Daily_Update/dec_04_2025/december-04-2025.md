@@ -57,6 +57,29 @@ This demonstration compares the original input video with the processed output v
 
 ---
 
+## Video Comparison - Screen Input 5
+
+
+<div style={{display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center', marginTop: '20px'}}>
+  <div style={{flex: '1', minWidth: '300px', maxWidth: '48%'}}>
+    <h3>Input Video</h3>
+    <video width="100%" controls>
+      <source src={require('../../../../static/vid/screenInput5.mp4').default} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <div style={{flex: '1', minWidth: '300px', maxWidth: '48%'}}>
+    <h3>Output Video</h3>
+    <video width="100%" controls>
+      <source src={require('../../../../static/vid/output_screenInput5.mp4').default} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+---
+
 ## Video Comparison - Screen Input 6
 
 
