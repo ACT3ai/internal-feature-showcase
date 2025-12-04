@@ -95,6 +95,11 @@ const sidebars = {
               items: [
                 {
                   type: 'doc',
+                  id: 'screen/Daily_Update/dec_04_2025/december-04-2025',
+                  label: 'December 4, 2025',
+                },
+                {
+                  type: 'doc',
                   id: 'screen/Daily_Update/nov_21_2025/SCREEN_REPLACEMENT_GENERATION_FLOW',
                   label: 'November 21, 2025',
                 },
