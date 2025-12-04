@@ -126,6 +126,29 @@ This demonstration compares the original input video with the processed output v
 
 ---
 
+## Video Comparison - Screen Input 11
+
+
+<div style={{display: 'flex', gap: '20px', flexWrap: 'wrap', justifyContent: 'center', marginTop: '20px'}}>
+  <div style={{flex: '1', minWidth: '300px', maxWidth: '48%'}}>
+    <h3>Input Video</h3>
+    <video width="100%" controls>
+      <source src={require('../../../../static/vid/screenInput11.mp4').default} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+  
+  <div style={{flex: '1', minWidth: '300px', maxWidth: '48%'}}>
+    <h3>Output Video</h3>
+    <video width="100%" controls>
+      <source src={require('../../../../static/vid/output_screenInput11.mp4').default} type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+  </div>
+</div>
+
+---
+
 ## Notes
 
 * **Input Video:** Original footage showing the screen before replacement processing
