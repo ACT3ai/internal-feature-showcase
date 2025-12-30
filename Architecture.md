@@ -1,3 +1,5 @@
+/Users/bryan/BGit/act3/WebApp/internal-feature-showcase/Architecture.md
+
 # Architecture Documentation: internal-feature-showcase
 
 ## Executive Summary
@@ -8,8 +10,6 @@ The **internal-feature-showcase** repository is a Docusaurus-based documentation
 **Deployed URL**: https://act3ai.github.io/internal-feature-showcase/
 **Tech Stack**: Docusaurus v3.0.0, React, TypeScript, Node.js v20+
 **Primary Purpose**: Executive Dashboard & Technical Documentation Hub
-
----
 
 ## Table of Contents
 
